@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ExampleSuite" parallel="false" thread-count="1">
+    <test name="ExampleTest">
+        <classes>
+            <class name="autotests.login.LoginFormTest">
+                <methods>
+                    <include name="checkLoginFunctionality"/>
+                    <include name="checkLoginWithoutLoginCredential"/>
+                    <include name="checkLoginWithoutPassword"/>
+                    <exclude name="checkLoginWithWrongPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
